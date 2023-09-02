@@ -123,12 +123,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  printf("Value of add is %lu and ppm is %lu\n",mq135.adc_value, mq135.ppm);
+	  printf("Value of add is %lu and ppm is %d\n",mq135.adc_value, (int)getCorrectedPPM(&mq135, 30.5, 90.0));
 	  HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
 
+//getCorrectedPPM(struct MQ135 *mq135, float t, float h) ;
 /**
   * @brief System Clock Configuration
   * @retval None
