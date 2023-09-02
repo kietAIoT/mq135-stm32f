@@ -29,4 +29,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>mq135</name>
+			<type>2</type>
+			<location>F:/Workspace/3_Embedded/STM32/workspace/library/mq135</location>
+		</link>
+	</linkedResources>
 </projectDescription>

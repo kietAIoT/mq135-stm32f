@@ -1,0 +1,8 @@
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:5:7:Init	3
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:16:7:getCorrectionFactor	2
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:25:7:getResistance	1
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:39:7:getCorrectedResistance	1
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:43:7:getPPM	1
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:47:7:getCorrectedPPM	1
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:52:7:getRZero	1
+F:/Workspace/3_Embedded/STM32/workspace/library/mq135/mq135.c:57:7:getCorrectedRZero	1

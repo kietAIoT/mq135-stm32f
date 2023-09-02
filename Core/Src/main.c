@@ -22,7 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
-#include "string.h"
+//#include "string.h"
+#include "mq135.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -71,6 +72,7 @@ int _write(int file, char *ptr, int len)
 	}
 	return len;
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -94,9 +96,9 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
-
+ // Sin chào
   /* USER CODE BEGIN SysInit */
-
+//xin cahas
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -104,11 +106,14 @@ int main(void)
   MX_DMA_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+  printf("Arc begin\n");
 
 
-  HAL_ADCEx_Calibration_Start(&hadc1);
-  HAL_ADC_Start_DMA(&hadc1,(uint32_t*)&adc_value,1);
-  printf("Begin");
+//  HAL_ADCEx_Calibration_Start(&hadc1);
+//  HAL_ADC_Start_DMA(&hadc1,(uint32_t*)&adc_value,1);
+  struct MQ135 mq135;
+//  printf("Begin");
+  Init(&mq135, &hadc1, &hdma_adc1, -1, -1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -118,7 +123,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  printf("Value of adc is %lu\n",adc_value);
+	  printf("Value of add is %lu and ppm is %lu\n",mq135.adc_value, mq135.ppm);
 	  HAL_Delay(500);
   }
   /* USER CODE END 3 */
